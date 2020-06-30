@@ -24,12 +24,12 @@ int main()
 
     //Ввод/вывод данных
     {
-        cout << "\n Hello, " << "World!";
+        cout << "\n Hello, " << "World!" << endl;
         int a; 
-        cout << "\n Enter a: ";
+        cout << "Enter a: " << endl;
         cin >> a; 
         float b; 
-        cout << "\n Enter b: ";
+        cout << "Enter b: " << endl;
         cin >> b;
         cout << "a = " << a << ", b = " << b;
     }
