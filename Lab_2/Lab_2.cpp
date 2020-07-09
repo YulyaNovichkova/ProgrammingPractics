@@ -227,23 +227,38 @@ int GetPower(int base, int power)
 //?????????? ?????
 void GuessNumber()
 {
-	cout << "Guess the number 0 to 9" << endl;
+	cout << "Guess a number from 0 to 9 in 10 attempts!" << endl;
 
 	srand(time(NULL));
 
 	int value;
 	int random = 1 + rand() % 10;
+	int temp = 1;
 
-	cout << "Enter value: ";
-	cin >> value;
-
-	while (value != random)
+	while (temp <= 10)
 	{
-		cout << "Enter value: ";
+		cout << temp << " attempt: ";
 		cin >> value;
+
+		if (value > random)
+		{
+			cout << "Many" << endl;
+		}
+		if (value < random)
+		{
+			cout << "Few" << endl;
+		}
+		else if (value == random)
+		{
+			cout << "You win!" << endl;
+			break;
+		}
+
+		temp++;
 	}
-	if (value == random)
+
+	if (temp == 11)
 	{
-		cout << "You win!" << endl;
+		cout << "You are lose!" << endl;
 	}
 }
