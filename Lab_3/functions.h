@@ -1,3 +1,4 @@
+#pragma once
 #include <iostream>
 #include <ctime>
 
@@ -18,33 +19,6 @@ int GetPower(int, int);
 void GuessNumber();
 
 static int value = 4; // global'naya peremennaya
-
-int main()
-{
-	Pointer();
-	system("pause");
-
-	Link();
-	system("pause");
-
-	Power();
-	system("pause");
-
-	cout << "An example of how local and global variables work: " << endl;
-
-	int value = 8; // lokal'naya peremennaya
-
-	value++; // uvilichenie lokal'noj peremennoj
-	::value--; // umen'shenie global'naoj peremennoj
-
-	cout << "Local value: " << value << endl;
-	cout << "Global value: " << ::value << endl;
-	system("pause");
-
-	GuessNumber();
-
-	return 0;
-}
 
 // Korni kvadratnogo uravneniya
 int Pointer()
@@ -101,8 +75,8 @@ int Link()
 	double root1 = NULL;
 	double root2 = NULL;
 
-	double &x1 = root1;
-	double &x2 = root2;
+	double& x1 = root1;
+	double& x2 = root2;
 
 	cout << "Enter a: ";
 	cin >> a;
@@ -211,7 +185,7 @@ void Power()
 	cout << "Enter power:" << endl;
 	cin >> power;
 
-	cout << endl << "Received value: "  << GetPower(base, power) << endl;
+	cout << endl << "Received value: " << GetPower(base, power) << endl;
 }
 
 //Vozvedenie chisla v stepen'
