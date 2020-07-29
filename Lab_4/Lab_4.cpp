@@ -1,8 +1,11 @@
 #include <iostream>
 #include <windows.h>
+#include <cstring>
+#include <string>
 #include "Weekday.h"
 #include "Month.h"
 #include "Color.h"
+#include "Person.h"
 
 using namespace std;
 
@@ -136,7 +139,8 @@ int main()
         cout << "Gray is 1" << endl
             << "Red is 2" << endl
             << "Blue is 3" << endl
-            << "Green is 4" << endl << endl;
+            << "Green is 4" << endl 
+            << "0 is exit" << endl << endl;
 
         cout << "Enter color (from 1 to 4): ";
         cin >> color;
@@ -171,10 +175,41 @@ int main()
             system("color 02");
             break;
         }
+        case '0':
+            system("color 07");
+            break;
+        default:
+            cout << "Error" << endl;
+            break;
         }
     } while (color != '0');
     int k = atoi(&color);
-    return(k);
+
+    system("pause");
+    system("cls");
+
+    Person ivan = { "Ivan", "Ivanov", 43, Male };
+    Person petr = { "Petr", "Petrov", 5, Male };
+
+    Person yulya = { "Yulya", "Novichkova", 22, Female};
+    cout << "Name is " << yulya.Name << endl;
+    cout << "Sex is " << yulya.Sex << endl;
+
+    Person* personPointer = &yulya;
+    cout << personPointer << endl;
+    personPointer->Age = 25;
+    cout << "Age is " << personPointer->Age << endl << endl;
+
+    const int N = 3;
+    Person Person[N];
+    for (int i = 0; i < N; i++)
+    {
+        Person[i].Read();
+    }
+    for (int i = 0; i < N; i++)
+    {
+        Person[i].Show();
+    }
 
 }
 

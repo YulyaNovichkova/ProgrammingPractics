@@ -140,10 +140,12 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Lab_4.cpp" />
+    <ClCompile Include="Person.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Color.h" />
     <ClInclude Include="Month.h" />
+    <ClInclude Include="Person.h" />
     <ClInclude Include="Sex.h" />
     <ClInclude Include="Weekday.h" />
   </ItemGroup>
