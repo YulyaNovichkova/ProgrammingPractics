@@ -1,42 +1,184 @@
-#include <iostream>
-#include <ctime>
+﻿#include <iostream>
+#include <iomanip>
 #include "arrays.h"
 
 using namespace std;
 
-int main()
+//Sortirovka vyborom
+void Sort(double* array, int arrayLength)
 {
-	srand(time(NULL));
-
-	cout << "Array sorting!" << endl;
-
-	int arrayLength;
-	cout << "Enter array length: ";
-	cin >> arrayLength;
-
-	double* array = new double[arrayLength];
-
+	int j = 0;
+	int tmp = 0;
 	for (int i = 0; i < arrayLength; i++)
 	{
-		array[i] = (rand() % arrayLength);
+		j = i;
+		for (int k = i; k < arrayLength; k++)
+		{
+			if (array[j] > array[k])
+			{
+				j = k;
+			}
+		}
+		tmp = array[i];
+		array[i] = array[j];
+		array[j] = tmp;
 	}
-	cout << "You array: ";
-	for (int i = 0; i < arrayLength; i++)
-	{
-		cout << array[i] << " ";
-	}
+}
+
+//Zadat' matricy
+void Matrices()
+{
+	int aRows, aCols, bRows, bCols;
 
 	cout << endl;
-	Sort(array, arrayLength);
-	cout << "New array: ";
-	for (int i = 0; i < arrayLength; i++)
+	cout << "Attention! The number of columns of the matrix A" << endl
+		<< "must coincide with the number of rows of the matrix B!" << endl;
+	cout << endl;
+	cout << "Enter the number of rows of matrix A: ";
+	cin >> aRows;
+	cout << "Enter the number of columns of the matrix A: ";
+	cin >> aCols;
+	cout << "Enter the number of rows of matrix B: ";
+	cin >> bRows;
+	cout << "Enter the number of columns of the matrix B: ";
+	cin >> bCols;
+	cout << endl;
+
+	// Zadanie dinamicheskix matriw
+	int** matrixA = new int* [aRows];
+	for (int i = 0; i < aRows; i++)
 	{
-		cout << array[i] << " ";
+		matrixA[i] = new int[aCols];
 	}
 
-	system("pause");
+	int** matrixB = new int* [bRows];
+	for (int i = 0; i < bRows; i++)
+	{
+		matrixB[i] = new int[bCols];
+	}
 
+	int** resultMatrix = new int* [aRows];
+	for (int i = 0; i < aRows; i++)
+	{
+		resultMatrix[i] = new int[bCols];
+	}
+
+	cout << "The matrix A is: " << endl;
+	for (int i = 0; i < aRows; i++)
+	{
+		for (int j = 0; j < aCols; j++)
+		{
+			cout << setw(3) << (matrixA[i][j] = rand() % 10);
+		}
+		cout << endl;
+	}
 	cout << endl;
-	cout << "Matrix multiplication!" << endl;
-	Matrices();
+	cout << "The matrix B is: " << endl;
+	for (int i = 0; i < bRows; i++)
+	{
+		for (int j = 0; j < bCols; j++)
+		{
+			cout << setw(3) << (matrixB[i][j] = rand() % 10);
+		}
+		cout << endl;
+	}
+	cout << endl;
+
+	MultiplyMatrices(matrixA, aRows, aCols, matrixB, bRows, bCols, resultMatrix);
+
+	delete[]matrixA;
+	delete[]matrixB;
+	delete[]resultMatrix;
+}
+
+//Peremnojenie matric
+bool MultiplyMatrices(int** matrixA, int aRows, int aCols,
+	int** matrixB, int bRows, int bCols, int** resultMatrix)
+{
+	if (aCols != bRows)
+	{
+		cout << "Error!" << endl;
+		return false;
+	}
+	else
+	{
+		cout << "The new matrix is: " << endl;
+		for (int i = 0; i < aRows; i++)
+		{
+			for (int j = 0; j < bCols; j++)
+			{
+				resultMatrix[i][j] = 0;
+				for (int k = 0; k < aCols; k++)
+				{
+					resultMatrix[i][j] += matrixA[i][k] * matrixB[k][j];
+
+				}
+				cout << setw(4) << resultMatrix[i][j] << setw(8);
+			}
+			cout << endl;
+		}
+		return true;
+	}
+}
+
+// Opredelit' dlinu stroki
+int GetLength(char* string)
+{
+	int length = 0;
+	if (string == NULL)
+	{
+		return -1;
+	}
+	else
+	{
+		for (int i = 0; string[i]; ++i)
+		{
+			++length;
+		}
+	}
+	return length;
+}
+
+// Index simvola
+int IndexOf(char* string, char c)
+{
+	int index = 0;
+	if (string == NULL)
+	{
+		return -1;
+	}
+	else
+	{
+		for (int i = 0; string[i]; ++i)
+		{
+			if (string[i] == c)
+			{
+				cout << "Index is: " << index << endl;
+				break;
+			}
+			else ++index;
+		}
+	}
+}
+
+// Index poslednego vhojdeniya
+int LastIndexOf(char* string, char c)
+{
+	int index = GetLength(string);
+	if (string == NULL)
+	{
+		return -1;
+	}
+	else
+	{
+		for (int i = index; string[i] >= 0; --i)
+		{
+			if (string[i] == c)
+			{
+				cout << "Index is (last): " << index << endl;
+				break;
+			}
+			else --index;
+		}
+	}
 }
