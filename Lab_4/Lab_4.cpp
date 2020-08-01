@@ -188,10 +188,24 @@ int main()
     system("pause");
     system("cls");
 
-    Person ivan = { "Ivan", "Ivanov", 43, Male };
-    Person petr = { "Petr", "Petrov", 5, Male };
+    Person ivan;
+    ivan.Name = "Ivan";
+    ivan.Surname = "Ivanov";
+    ivan.Age = 43;
+    ivan.Sex = Male;
 
-    Person yulya = { "Yulya", "Novichkova", 22, Female};
+    Person petr;
+    ivan.Name = "Petr";
+    ivan.Surname = "Petrov";
+    ivan.Age = 5;
+    ivan.Sex = Male;
+
+    Person yulya;
+    ivan.Name = "Yulya";
+    ivan.Surname = "Novichkova";
+    ivan.Age = 22;
+    ivan.Sex = Female;
+
     cout << "Name is " << yulya.Name << endl;
     cout << "Sex is " << yulya.Sex << endl;
 
@@ -201,15 +215,16 @@ int main()
     cout << "Age is " << personPointer->Age << endl << endl;
 
     const int N = 3;
-    Person Person[N];
+    Person person[N];
     for (int i = 0; i < N; i++)
     {
-        Person[i].Read();
+        ReadPerson(&person[i]);
     }
     for (int i = 0; i < N; i++)
     {
-        Person[i].Show();
+        PrintPerson(person[i]);
     }
-
+    
+    //Person *person22 = new Person();
 }
 

@@ -3,78 +3,38 @@
 
 using namespace std;
 
-void Person::Read()
+void PrintPerson(Person& person)
 {
-	cout << "Name: ";
-	cin >> Name;
 
-	cout << "Surame: ";
-	cin >> Surname;
+	cout << endl << person.Name << " " << person.Surname
+		<< "    Age: " << person.Age << "    Sex: " << person.Sex << endl;
+}
 
-	cout << "Age: ";
-	cin >> Age;
-
+void ReadPerson(Person* person)
+{
 	int numberSex;
+
+	cout << "Enter name: " << endl;
+	cin >> person->Name;
+	cout << "Enter surname: " << endl;
+	cin >> person->Surname;
+	cout << "Enter age: " << endl;
+	cin >> person->Age;
 	cout << "Sex: Enter '0' for female, '1' for male: ";
 	cin >> numberSex;
 	switch (numberSex)
 	{
-	case 0:
-	{
-		Sex = Female;
-		break;
+		case 0:
+		{
+			person->Sex = Female;
+			break;
+		}
+		case 1:
+		{
+			person->Sex = Male;
+			break;
+		}
 	}
-	case 1:
-	{
-		Sex = Male;
-		break;
-	}
-	}
+
+	Person* person = new Person(person->Name, person->Surname, person->Age, person->Sex);
 }
-
-void Person::Show()
-{
-	cout << endl << Name << " " << Surname << "   Age: " << Age
-		<< "   Sex: " << Sex << endl;
-}
-
-
-//void PrintPerson(Person& person)
-//{
-//
-//	cout << person.Name << " " << person.Surname 
-//		<< "    Age: " << person.Age << "    Sex: " << person.Sex;
-//}
-
-//void ReadPerson(Person* person)
-//{
-//	char name;
-//	char surname;
-//	int age;
-//	enum Sex sex;
-//	int numberSex;
-//
-//	cout << "Enter name: " << endl;
-//	cin >> name;
-//	cout << "Enter surname: " << endl;
-//	cin >> surname;
-//	cout << "Enter age: " << endl;
-//	cin >> age;
-//	cout << "Sex: Enter '0' for female, '1' for male: ";
-//	cin >> numberSex;
-//	switch (numberSex)
-//	{
-//		case 0:
-//		{
-//			sex = Female;
-//			break;
-//		}
-//		case 1:
-//		{
-//			sex = Male;
-//			break;
-//		}
-//	}
-//
-//	Person* person = new Person(name, surname, sex, age);
-//}

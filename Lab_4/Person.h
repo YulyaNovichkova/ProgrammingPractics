@@ -3,13 +3,17 @@
 
 struct Person 
 { 
-	char Name[20];
-	char Surname[30];
+	string Name;
+	string Surname;
 	int Age;    
 	Sex Sex; 
 
-	void Read();
-	void Show();
+	Person() {};
+	Person(string Name, string Surname, int Age, enum Sex Sex)
+	{
+
+	}
 };
 
-
+void PrintPerson(Person&);
+void ReadPerson(Person*);
