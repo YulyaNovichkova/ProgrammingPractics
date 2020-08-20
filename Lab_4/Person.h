@@ -1,6 +1,8 @@
 #pragma once
 #include "Sex.h"
 
+using namespace std;
+
 struct Person 
 { 
 	string Name;
@@ -9,10 +11,7 @@ struct Person
 	Sex Sex; 
 
 	Person() {};
-	Person(string Name, string Surname, int Age, enum Sex Sex)
-	{
-
-	}
+	Person(string name, string surname, int age, enum Sex sex);
 };
 
 void PrintPerson(Person&);

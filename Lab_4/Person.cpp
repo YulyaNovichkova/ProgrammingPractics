@@ -3,11 +3,29 @@
 
 using namespace std;
 
+Person::Person(string name, string surname, int age, enum Sex sex)
+{
+	Name = name;
+	Surname = surname;
+	Age = age;
+	Sex = sex;
+};
+
 void PrintPerson(Person& person)
 {
-
 	cout << endl << person.Name << " " << person.Surname
-		<< "    Age: " << person.Age << "    Sex: " << person.Sex << endl;
+		<< "    Age: " << person.Age;
+	switch (person.Sex)
+	{
+	case 0:
+		cout << "    Sex: female" << endl;
+		break;
+	case 1:
+		cout << "    Sex: male" << endl;
+		break;
+	default:
+		break;
+	}
 }
 
 void ReadPerson(Person* person)
@@ -35,6 +53,4 @@ void ReadPerson(Person* person)
 			break;
 		}
 	}
-
-	Person* person = new Person(person->Name, person->Surname, person->Age, person->Sex);
 }
