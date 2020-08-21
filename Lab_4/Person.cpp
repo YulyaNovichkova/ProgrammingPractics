@@ -13,7 +13,7 @@ Person::Person(string name, string surname, int age, enum Sex sex)
 
 void PrintPerson(Person& person)
 {
-	cout << endl << person.Name << " " << person.Surname
+	cout << person.Name << " " << person.Surname
 		<< "    Age: " << person.Age;
 	switch (person.Sex)
 	{
