@@ -16,6 +16,7 @@ int main()
     int month;
     char color; 
     
+    // Zadanie 3
 	cout << "Enter day of the year (from 1 to 365): ";
 	cin >> day;
 
@@ -64,6 +65,7 @@ int main()
     }
     system("pause");
 
+    // Zadanie 4
     cout << endl;
     cout << "Enter month of the year (from 1 to 12): ";
     cin >> month;
@@ -135,6 +137,7 @@ int main()
 
     cout << endl;
 
+    // Zadanie 5
     do
     {
         cout << "Gray is 1" << endl
@@ -189,6 +192,7 @@ int main()
     system("pause");
     system("cls");
 
+    // Zadanie 6 i 7
     Person ivan;
     ivan.Name = "Ivan";
     ivan.Surname = "Ivanov";
@@ -207,14 +211,17 @@ int main()
     yulya.Age = 22;
     yulya.Sex = Female;
 
+    // Zadanie 8
     cout << "Name is " << yulya.Name << endl;
     cout << "Sex is " << yulya.Sex << endl;
 
+    // Zadanie 9-11
     Person* personPointer = &yulya;
     cout << personPointer << endl;
     personPointer->Age = 25;
     cout << "Age is " << personPointer->Age << endl << endl;
 
+    // Zadanie 13
     const int N = 3;
     Person person[N];
     for (int i = 0; i < N; i++)
@@ -226,9 +233,10 @@ int main()
         PrintPerson(person[i]);
     }
 
-       system("pause");
-       system("cls");
+    system("pause");
+    system("cls");
 
+    // Zadanie 14
     Person *newPerson = new Person();
     ReadPerson(newPerson);
     PrintPerson(*newPerson);
@@ -237,6 +245,7 @@ int main()
     system("pause");
     system("cls");
 
+    // Zadanie 15
     // Massiv ukazatelei
     const int n = 5;
 
@@ -253,15 +262,16 @@ int main()
         cout << i << ". ";
         PrintPerson(arrayPerson[i]);
     }
-    for (int i = 0; i < 5; i++)
-    {
-        // !!!!!!!!!!!!! ne rabotaet !!!!!!!!!!!!!!!!
-        delete [] &arrayPerson[i];
-    }
+    // !!!!!!!!!!!!! ne rabotaet !!!!!!!!!!!!!!!!
+    //for (int i = 0; i < 5; i++)
+    //{
+    //    delete [] &arrayPerson[i];
+    //}
 
     system("pause");
     system("cls");
 
+    // Zadanie 16
     // Vector
     vector<int> v1;
 
@@ -296,6 +306,7 @@ int main()
     system("pause");
     system("cls");
 
+    // Zadanie 17
     // Vector iz lydei
     vector<string> friends;
 
