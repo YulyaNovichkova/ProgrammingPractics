@@ -88,9 +88,41 @@ int main()
 
 	char* array2 = line2;
 
-	IndexOf(array2, symbol);
-	LastIndexOf(array2, symbol);
+	cout << "Index is: "  << IndexOf(array2, symbol) << endl;;
+	cout << "Index is (last): " << LastIndexOf(array2, symbol) << endl;
 	system("pause");
 
+	cout << endl;
+	char line3[255];
+	char substring[255];
+	int startIndex;
+	int substringLength;
+
+	cout << "Enter string:" << endl;
+	cin >> line3;
+
+	cout << "Enter start index:" << endl;
+	cin >> startIndex;
+
+	cout << "Enter substring length:" << endl;
+	cin >> substringLength;
+
+	GetSubstring(line3, substring, startIndex, substringLength);
+	system("pause");
+
+	cout << endl;
+	char fullFilename[255];
+	char filename[255];
+	char fileExtension[255];
+	char filepath[255];
+
+	cout << "Enter full filename:" << endl;
+	cin >> fullFilename;
+
+	GetFilename(fullFilename, filename);
+	GetFileExtension(fullFilename, fileExtension);
+	GetFilepath(fullFilename, filepath);
+
+	system("pause");
 	return 0;
 }

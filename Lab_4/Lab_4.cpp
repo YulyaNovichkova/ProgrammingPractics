@@ -12,268 +12,262 @@ using namespace std;
 
 int main()
 {
-	int day;
-    int month;
-    char color; 
-    
-    // Zadanie 3
-	cout << "Enter day of the year (from 1 to 365): ";
-	cin >> day;
+	//int day;
+ //   int month;
+ //   char color; 
+ //   
+ //   // Zadanie 3
+	//cout << "Enter day of the year (from 1 to 365): ";
+	//cin >> day;
 
-	while (day > 7)
-	{
-		day -= 7;
-	}
+	//while (day > 7)
+	//{
+	//	day -= 7;
+	//}
 
-    switch (day)
-    {
-        case 1: 
-        {
-            cout << "Day of week - Monday" << endl;
-            break;
-        }
-        case 2: 
-        {
-            cout << "Day of week - Tuesday" << endl;
-            break;
-        }
-        case 3: 
-        {
-            cout << "Day of week - Wednesday" << endl;
-            break;
-        }
-        case 4: 
-        {
-            cout << "Day of week - Thursday" << endl;
-            break;
-        }
-        case 5: 
-        {
-            cout << "Day of week - Friday" << endl;
-            break;
-        }
-        case 6: 
-        {
-            cout << "Day of week - Saturday" << endl;
-            break;
-        }
-        case 7: 
-        {
-            cout << "Day of week - Sunday" << endl;
-            break;
-        }
-    }
-    system("pause");
+ //   switch (day)
+ //   {
+ //       case 1: 
+ //       {
+ //           cout << "Day of week - Monday" << endl;
+ //           break;
+ //       }
+ //       case 2: 
+ //       {
+ //           cout << "Day of week - Tuesday" << endl;
+ //           break;
+ //       }
+ //       case 3: 
+ //       {
+ //           cout << "Day of week - Wednesday" << endl;
+ //           break;
+ //       }
+ //       case 4: 
+ //       {
+ //           cout << "Day of week - Thursday" << endl;
+ //           break;
+ //       }
+ //       case 5: 
+ //       {
+ //           cout << "Day of week - Friday" << endl;
+ //           break;
+ //       }
+ //       case 6: 
+ //       {
+ //           cout << "Day of week - Saturday" << endl;
+ //           break;
+ //       }
+ //       case 7: 
+ //       {
+ //           cout << "Day of week - Sunday" << endl;
+ //           break;
+ //       }
+ //   }
+ //   system("pause");
 
-    // Zadanie 4
-    cout << endl;
-    cout << "Enter month of the year (from 1 to 12): ";
-    cin >> month;
+ //   // Zadanie 4
+ //   cout << endl;
+ //   cout << "Enter month of the year (from 1 to 12): ";
+ //   cin >> month;
 
-    switch (month)
-    {
-        case 1:
-        {
-            cout << "Month of year - January" << endl;
-            break;
-        }
-        case 2:
-        {
-            cout << "Month of year - February" << endl;
-            break;
-        }
-        case 3:
-        {
-            cout << "Month of year - March" << endl;
-            break;
-        }
-        case 4:
-        {
-            cout << "Month of year - April" << endl;
-            break;
-        }
-        case 5:
-        {
-            cout << "Month of year - May" << endl;
-            break;
-        }
-        case 6:
-        {
-            cout << "Month of year - June" << endl;
-            break;
-        }
-        case 7:
-        {
-            cout << "Month of year - July" << endl;
-            break;
-        }
-        case 8:
-        {
-            cout << "Month of year - August" << endl;
-            break;
-        }
-        case 9:
-        {
-            cout << "Month of year - September" << endl;
-            break;
-        }
-        case 10:
-        {
-            cout << "Month of year - October" << endl;
-            break;
-        }
-        case 11:
-        {
-            cout << "Month of year - November" << endl;
-            break;
-        }
-        case 12:
-        {
-            cout << "Month of year - Decembe" << endl;
-            break;
-        }
-    }
-    system("pause");
+ //   switch (month)
+ //   {
+ //       case 1:
+ //       {
+ //           cout << "Month of year - January" << endl;
+ //           break;
+ //       }
+ //       case 2:
+ //       {
+ //           cout << "Month of year - February" << endl;
+ //           break;
+ //       }
+ //       case 3:
+ //       {
+ //           cout << "Month of year - March" << endl;
+ //           break;
+ //       }
+ //       case 4:
+ //       {
+ //           cout << "Month of year - April" << endl;
+ //           break;
+ //       }
+ //       case 5:
+ //       {
+ //           cout << "Month of year - May" << endl;
+ //           break;
+ //       }
+ //       case 6:
+ //       {
+ //           cout << "Month of year - June" << endl;
+ //           break;
+ //       }
+ //       case 7:
+ //       {
+ //           cout << "Month of year - July" << endl;
+ //           break;
+ //       }
+ //       case 8:
+ //       {
+ //           cout << "Month of year - August" << endl;
+ //           break;
+ //       }
+ //       case 9:
+ //       {
+ //           cout << "Month of year - September" << endl;
+ //           break;
+ //       }
+ //       case 10:
+ //       {
+ //           cout << "Month of year - October" << endl;
+ //           break;
+ //       }
+ //       case 11:
+ //       {
+ //           cout << "Month of year - November" << endl;
+ //           break;
+ //       }
+ //       case 12:
+ //       {
+ //           cout << "Month of year - Decembe" << endl;
+ //           break;
+ //       }
+ //   }
+ //   system("pause");
 
-    cout << endl;
+ //   cout << endl;
 
-    // Zadanie 5
-    do
-    {
-        cout << "Gray is 1" << endl
-            << "Red is 2" << endl
-            << "Blue is 3" << endl
-            << "Green is 4" << endl 
-            << "0 is exit" << endl << endl;
+ //   // Zadanie 5
+ //   do
+ //   {
+ //       cout << "Gray is 1" << endl
+ //           << "Red is 2" << endl
+ //           << "Blue is 3" << endl
+ //           << "Green is 4" << endl 
+ //           << "0 is exit" << endl << endl;
 
-        cout << "Enter color (from 1 to 4): ";
-        cin >> color;
-        system("cls");
+ //       cout << "Enter color (from 1 to 4): ";
+ //       cin >> color;
+ //       system("cls");
 
-        cin.ignore(1);
-        system("cls");
+ //       cin.ignore(1);
+ //       system("cls");
 
-        switch (color)
-        {
-        case '1':
-        {
-            system("cls");
-            system("color 08");
-            break;
-        }
-        case '2':
-        {
-            system("cls");
-            system("color 04");
-            break;
-        }
-        case '3':
-        {
-            system("cls");
-            system("color 03");
-            break;
-        }
-        case '4':
-        {
-            system("cls");
-            system("color 02");
-            break;
-        }
-        case '0':
-            system("color 07");
-            break;
-        default:
-            cout << "Error" << endl;
-            break;
-        }
-    } while (color != '0');
-    int k = atoi(&color);
+ //       switch (color)
+ //       {
+ //       case '1':
+ //       {
+ //           system("cls");
+ //           system("color 08");
+ //           break;
+ //       }
+ //       case '2':
+ //       {
+ //           system("cls");
+ //           system("color 04");
+ //           break;
+ //       }
+ //       case '3':
+ //       {
+ //           system("cls");
+ //           system("color 03");
+ //           break;
+ //       }
+ //       case '4':
+ //       {
+ //           system("cls");
+ //           system("color 02");
+ //           break;
+ //       }
+ //       case '0':
+ //           system("color 07");
+ //           break;
+ //       default:
+ //           cout << "Error" << endl;
+ //           break;
+ //       }
+ //   } while (color != '0');
+ //   int k = atoi(&color);
 
-    system("pause");
-    system("cls");
+ //   system("pause");
+ //   system("cls");
 
-    // Zadanie 6 i 7
-    Person ivan;
-    ivan.Name = "Ivan";
-    ivan.Surname = "Ivanov";
-    ivan.Age = 43;
-    ivan.Sex = Male;
+ //   // Zadanie 6 i 7
+ //   Person ivan;
+ //   ivan.Name = "Ivan";
+ //   ivan.Surname = "Ivanov";
+ //   ivan.Age = 43;
+ //   ivan.Sex = Male;
 
-    Person petr;
-    petr.Name = "Petr";
-    petr.Surname = "Petrov";
-    petr.Age = 5;
-    petr.Sex = Male;
+ //   Person petr;
+ //   petr.Name = "Petr";
+ //   petr.Surname = "Petrov";
+ //   petr.Age = 5;
+ //   petr.Sex = Male;
 
-    Person yulya;
-    yulya.Name = "Yulya";
-    yulya.Surname = "Novichkova";
-    yulya.Age = 22;
-    yulya.Sex = Female;
+ //   Person yulya;
+ //   yulya.Name = "Yulya";
+ //   yulya.Surname = "Novichkova";
+ //   yulya.Age = 22;
+ //   yulya.Sex = Female;
 
-    // Zadanie 8
-    cout << "Name is " << yulya.Name << endl;
-    cout << "Sex is " << yulya.Sex << endl;
+ //   // Zadanie 8
+ //   cout << "Name is " << yulya.Name << endl;
+ //   cout << "Sex is " << yulya.Sex << endl;
 
-    // Zadanie 9-11
-    Person* personPointer = &yulya;
-    cout << personPointer << endl;
-    personPointer->Age = 25;
-    cout << "Age is " << personPointer->Age << endl << endl;
+ //   // Zadanie 9-11
+ //   Person* personPointer = &yulya;
+ //   cout << personPointer << endl;
+ //   personPointer->Age = 25;
+ //   cout << "Age is " << personPointer->Age << endl << endl;
 
-    // Zadanie 13
-    const int N = 3;
-    Person person[N];
-    for (int i = 0; i < N; i++)
-    {
-        ReadPerson(&person[i]);
-    }
-    for (int i = 0; i < N; i++)
-    {
-        PrintPerson(person[i]);
-    }
+ //   // Zadanie 13
+ //   const int N = 3;
+ //   Person person[N];
+ //   for (int i = 0; i < N; i++)
+ //   {
+ //       ReadPerson(&person[i]);
+ //   }
+ //   for (int i = 0; i < N; i++)
+ //   {
+ //       PrintPerson(person[i]);
+ //   }
 
-    system("pause");
-    system("cls");
+ //   system("pause");
+ //   system("cls");
 
-    // Zadanie 14
-    Person *newPerson = new Person();
-    ReadPerson(newPerson);
-    PrintPerson(*newPerson);
-    delete newPerson;
+    //// Zadanie 14
+    //Person *newPerson = new Person();
+    //ReadPerson(newPerson);
+    //PrintPerson(*newPerson);
+    //delete newPerson;
 
-    system("pause");
-    system("cls");
+    //system("pause");
+    //system("cls");
 
-    // Zadanie 15
-    // Massiv ukazatelei
-    const int n = 5;
+    //// Zadanie 15
+    //// Massiv ukazatelei
+    /*const int n = 2;
 
-    Person* arrayPerson;
-    Person arrayNewPerson[5];
-    arrayPerson = arrayNewPerson;
+    Person *arrayPerson = new Person[2];
 
-    for (int i = 0; i < 5; i++)
+    for (int i = 0; i < 2; i++)
     {
         ReadPerson(&arrayPerson[i]);
     }
-    for (int i = 0; i < 5; i++)
+    for (int i = 0; i < 2; i++)
     {
         cout << i << ". ";
         PrintPerson(arrayPerson[i]);
     }
-    // !!!!!!!!!!!!! ne rabotaet !!!!!!!!!!!!!!!!
-    //for (int i = 0; i < 5; i++)
-    //{
-    //    delete [] &arrayPerson[i];
-    //}
+    delete[] arrayPerson;
 
     system("pause");
-    system("cls");
+    system("cls");*/
 
-    // Zadanie 16
-    // Vector
-    vector<int> v1;
+    //// Zadanie 16
+    //// Vector
+    /*vector<int> v1;
 
     v1.push_back(1);
     v1.push_back(2);
@@ -304,7 +298,7 @@ int main()
     cout << endl;
 
     system("pause");
-    system("cls");
+    system("cls");*/
 
     // Zadanie 17
     // Vector iz lydei
