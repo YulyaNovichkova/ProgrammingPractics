@@ -116,6 +116,9 @@ int main()
 	char fileExtension[255];
 	char filepath[255];
 
+	// Strochku nije mojno ispol'zovat' dlya testa
+	// C:\Users\yulia.novichkova\Desktop\TestTestTest.txt
+
 	cout << "Enter full filename:" << endl;
 	cin >> fullFilename;
 
